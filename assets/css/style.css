@@ -93,6 +93,75 @@ h6 {
   color: #000000;
 }
 
+/* CLIENTS SECTION */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 2rem;
+}
+
+.marquee-track {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+.reverse {
+  animation-direction: reverse;
+}
+
+.tech-logo {
+  display: inline-block;
+  margin: 0 2rem;
+  vertical-align: middle;
+}
+
+.tech-logo img {
+  height: 100px;
+  width: auto;
+  filter: grayscale(2%);
+  opacity: 0.9;
+  transition: all 0.3s;
+}
+
+.tech-logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Small devices (landscape phones, 576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  .tech-logo img {
+    height: 80px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+  .tech-logo {
+    margin: 0 1rem;
+  }
+  .tech-logo img {
+    height: 60px;
+  }
+}
+
+/* Marquee animation adjustments for mobile */
+@media (max-width: 767px) {
+  .marquee-container {
+    margin: 1rem 0;
+  }
+  .tech-logo {
+    margin: 0 1rem;
+  }
+}
+
 /* HEADER WRAPPER */
 #header {
   background: #ffffff;
@@ -1037,74 +1106,3 @@ section {
     font-size: 12px;
   }
 }
-
-
-/* CLIENTS SECTION */
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 2rem;
-}
-
-.marquee-track {
-  display: inline-block;
-  white-space: nowrap;
-  animation: marquee 30s linear infinite;
-}
-
-.reverse {
-  animation-direction: reverse;
-}
-
-.tech-logo {
-  display: inline-block;
-  margin: 0 2rem;
-  vertical-align: middle;
-}
-
-.tech-logo img {
-  height: 100px;
-  width: auto;
-  filter: grayscale(2%);
-  opacity: 0.9;
-  transition: all 0.3s;
-}
-
-.tech-logo:hover img {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: scale(1);
-}
-
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Small devices (landscape phones, 576px - 767px) */
-@media (max-width: 767px) and (min-width: 576px) {
-  .tech-logo img {
-    height: 80px;
-  }
-}
-
-/* Extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575px) {
-  .tech-logo {
-    margin: 0 1rem;
-  }
-  .tech-logo img {
-    height: 60px;
-  }
-}
-
-/* Marquee animation adjustments for mobile */
-@media (max-width: 767px) {
-  .marquee-container {
-    margin: 1rem 0;
-  }
-  .tech-logo {
-    margin: 0 1rem;
-  }
-}
-
