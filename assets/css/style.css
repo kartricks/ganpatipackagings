@@ -546,7 +546,7 @@ section {
 .marquee-track {
   display: inline-block;
   white-space: nowrap;
-  animation: marquee 30s linear infinite;
+  animation: marquee 10s linear infinite;
 }
 
 .reverse {
@@ -1107,4 +1107,5 @@ section {
     font-size: 12px;
   }
 }
+
 
